@@ -1,0 +1,175 @@
+:root {
+  --max-width: 900px;
+  --margin-large: 30px auto;
+  --padding-medium: 20px;
+  --padding-small: 15px;
+  --bg-white: #fff;
+  --border-radius: 8px;
+  --border-radius-large: 10px;
+  --box-shadow-light: 0 4px 12px rgba(0,0,0,0.1);
+  --box-shadow-card: 0 2px 5px rgba(0,0,0,0.1);
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-color-dark: #222;
+  --font-color-medium: #444;
+  --font-color-black: #000;
+  --font-color-white: #fff;
+  --navbar-height: 60px;
+  --navbar-bg: #2b6cb0;
+  --navbar-hover: darkblue;
+  --card-border: #ddd;
+  --gap: 20px;
+  --agent-img-height: 180px;
+  --primary-blue: #1a73e8;
+  --secondary-orange: #ff6600;
+  --success-green: #34a853;
+}
+
+/* Property details */
+.property-details {
+  max-width: var(--max-width);
+  margin: var(--margin-large);
+  padding: var(--padding-medium);
+  background: var(--bg-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-light);
+  font-family: var(--font-family);
+}
+
+.property-details img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+}
+
+.property-details h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--font-color-dark);
+}
+
+.property-details p {
+  font-size: 1.1rem;
+  color: var(--font-color-medium);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.property-details p strong {
+  color: var(--font-color-black);
+}
+
+@media (max-width: 600px) {
+  .property-details {
+    padding: var(--padding-small);
+  }
+  
+  .property-details img {
+    height: 250px;
+  }
+  
+  .property-details h1 {
+    font-size: 1.5rem;
+  }
+  
+  .property-details p {
+    font-size: 1rem;
+  }
+}
+
+/* Navbar */
+.navbar-center-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--navbar-height);
+  background-color: var(--navbar-bg);
+  box-shadow: var(--box-shadow-card);
+}
+
+.navbar-center-1 .navbar-logo {
+  color: var(--font-color-white);
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar-center-1 .navbar-logo:hover {
+  color: var(--navbar-hover);
+  transition: color 0.3s ease;
+}
+
+/* Agents container */
+.agents-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  margin-top: 20px;
+}
+
+/* Agent card */
+.agent-card {
+  flex: 1 1 calc(25% - 20px);
+  min-width: 220px;
+  background-color: var(--bg-white);
+  border: 1px solid var(--card-border);
+  border-radius: var(--border-radius-large);
+  padding: 15px;
+  text-align: center;
+  box-shadow: var(--box-shadow-card);
+  transition: transform 0.2s;
+}
+
+.agent-card:hover {
+  transform: translateY(-5px);
+}
+
+.agent-card img {
+  width: 100%;
+  height: var(--agent-img-height);
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.add-button-listings,
+.landlord,
+.hire-agent-btn {
+  padding: 10px 20px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.add-button-listings {
+  background-color: var(--primary-blue);
+  color: var(--font-color-white);
+}
+
+.landlord {
+  background-color: var(--secondary-orange);
+  color: var(--font-color-white);
+}
+
+.hire-agent-btn {
+  background-color: var(--success-green);
+  color: var(--font-color-white);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .agent-card {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .agent-card {
+    flex: 1 1 100%;
+  }
+}

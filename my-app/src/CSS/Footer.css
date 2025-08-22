@@ -1,0 +1,84 @@
+:root {
+  --footer-bg: #f5f5f5;
+  --footer-text: #333;
+  --footer-heading: #111;
+  --footer-link: #555;
+  --footer-link-hover: #007bff;
+  --footer-border: #ddd;
+
+  --space-sm: 10px;
+  --space-md: 20px;
+  --space-lg: 40px;
+
+  --radius-md: 8px;
+}
+
+.footer {
+  background: var(--footer-bg);
+  padding: var(--space-lg) var(--space-md) var(--space-md);
+  font-family: var(--primary-font, Arial, sans-serif);
+  color: var(--footer-text);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.footer-column h4 {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-sm);
+  color: var(--footer-heading);
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: var(--space-sm);
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: var(--footer-link);
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: var(--footer-link-hover);
+}
+
+.social-icons {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.social-icons a {
+  font-size: 1.2rem;
+  color: var(--footer-link);
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--footer-link-hover);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px 0;
+  background-color: var(--primary-dark);
+  color: var(--light-text);
+  font-size: 0.9rem;
+  justify-content: center;
+}
+
+.footer-bottom .brand-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--secondary-color);
+}

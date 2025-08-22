@@ -1,0 +1,147 @@
+/* RentalPropertyDetails.css */
+
+:root {
+  --max-width-container: 800px;
+  --margin-container: 40px auto;
+  --padding-container: 20px;
+  --background-container: #fff;
+  --border-radius: 12px;
+  --box-shadow-light: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --font-family-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  --heading-color: #333;
+  --text-color: #555;
+  --highlight-color: #000;
+
+  --agent-img-border: #1a73e8;
+  --btn-bg: #1a73e8;
+  --btn-hover-bg: #155ab6;
+
+  --agent-card-bg: #fff;
+  --agent-card-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  --agent-card-hover-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+  --agent-img-size: 100px;
+  --agent-card-max-width: 250px;
+}
+
+.rental-property-container {
+  max-width: var(--max-width-container);
+  margin: var(--margin-container);
+  padding: var(--padding-container);
+  background-color: var(--background-container);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-light);
+  font-family: var(--font-family-main);
+}
+
+.rental-property-container img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.rental-property-container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--heading-color);
+}
+
+.rental-property-container p {
+  font-size: 1rem;
+  margin: 6px 0;
+  color: var(--text-color);
+}
+
+.rental-property-container p span {
+  font-weight: 600;
+  color: var(--highlight-color);
+}
+
+@media (max-width: 768px) {
+  .rental-property-container {
+    padding: 15px;
+    margin: 20px;
+  }
+
+  .rental-property-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .rental-property-container p {
+    font-size: 0.95rem;
+  }
+}
+
+.agents-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 30px 0;
+  justify-content: flex-start;
+}
+
+.agent-card {
+  background-color: var(--agent-card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--agent-card-shadow);
+  flex: 1 1 calc(25% - 20px);
+  max-width: var(--agent-card-max-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.agent-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--agent-card-hover-shadow);
+}
+
+.agent-card img {
+  width: var(--agent-img-size);
+  height: var(--agent-img-size);
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 2px solid var(--agent-img-border);
+}
+
+.agent-card h3 { 
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: var(--heading-color);
+}
+
+.agent-card p { 
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin: 4px 0;
+}
+
+.agent-card button {
+  margin-top: 12px;
+  padding: 8px 15px;
+  background-color: var(--btn-bg);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.agent-card button:hover {
+  background-color: var(--btn-hover-bg);
+}
+
+@media screen and (max-width: 1024px) {
+  .agent-card { flex: 1 1 calc(50% - 20px); }
+}
+
+@media screen and (max-width: 768px) {
+  .agent-card { flex: 1 1 100%; }
+}
