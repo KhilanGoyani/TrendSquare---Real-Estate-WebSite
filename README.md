@@ -11,13 +11,14 @@ It allows users to list properties, search agents by location, and estimate hous
 - 🏠 **Property Listings** – Add, view, and search for properties easily  
 - 👨‍💼 **Find Agents** – Browse and contact agents based on location (e.g., Mumbai, Surat, Agra)  
 - 📊 **Price Estimation** – AI/ML-powered rent & price predictions  
-- 📱 **Responsive Design** – Works smoothly on desktop & mobile  
+- 📱 **Responsive Design** – Works smoothly on desktop & mobile
+- 🖥️ Admin Panel: Manage users, properties, and agents efficiently.
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Frontend**: React.js, CSS, Bootstrap  
+- **Frontend**: React.js, CSS, Bootstrap, JavaScript
 - **Backend**: Django REST Framework (Python)  
 - **Database**: MongoDB  
 - **Machine Learning**: Random Forest Regressor (Python)  
